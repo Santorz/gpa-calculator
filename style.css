@@ -1,0 +1,328 @@
+/* #752333 ,  0438A3  */
+
+/* IMPORT CSS FILES */
+@import url('css/fonts.css');
+
+ /* shhh!!!! */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* What do you expect me to say here too? */
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* The body of the page.Nothing else */
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+};
+
+    
+a{
+    outline: none;
+    user-select: none;
+}
+
+
+button:focus, input:focus, textarea:focus{
+    outline: 0 !important;
+}
+
+.parent-container{
+    background: url(img/bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+}
+
+.container-1{
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+#topmost{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 50% 35%;
+    user-select: none;
+    background: inherit;
+    background-color: rgba(240, 240, 240, 0.8);
+    backdrop-filter: blur(2px);
+}
+
+
+.logo-area-div{
+    position: relative;
+}
+
+.logotext-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logotext-div h1{
+    font-family: 'Sansita Swashed', cursive;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    padding: .75rem;
+    font-weight: bold !important;
+}
+
+#logotext1{
+    color: #0438A3;
+}
+
+#logotext2{
+    color: #80001a;
+}
+
+.logotext-and-version-divider{
+    display: none;
+}
+
+.version-text{
+    position: relative;
+    color: black;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.2rem;
+    top: .75rem;
+}
+
+.mobile-options-menu{
+    display: none;
+}
+
+
+.container-2{
+    position: relative;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: rgb(255, 255, 255);
+    user-select: none;
+    padding-top: .5rem;
+    backdrop-filter: blur(2px);
+    border-bottom: 4px solid rgba(240, 240, 240, 0.8);
+}
+
+.short-intro-div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.short-intro-div div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .4rem;
+}
+
+.short-intro-header{
+    position: relative;
+    font-size: 4rem;
+    font-family: 'Texturina', serif;
+    width: 50%;
+    text-align: center;
+    padding: 5rem 0rem;
+    margin: auto auto;
+}
+
+.short-intro-paragraph{
+    font-family: 'Mukta', sans-serif;
+    padding: 2rem;
+    font-size: 1.25rem;
+    text-align: justify;
+}
+
+.container-3{
+    position: relative;
+    background: rgb(4,56,163);
+    background: linear-gradient(180deg, 
+    rgba(4,56,163,0.7959558823529411) 0%, 
+    rgba(11,95,166,0.8) 44%, 
+    rgba(200,13,51,0.7987570028011204) 56%, 
+    rgba(128,0,26,0.7987570028011204) 100%);
+}
+
+.different-app-types-div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+    padding-bottom: 3rem;
+}
+
+.different-app-types-header-div{
+    position: relative;
+    text-align: center;
+    height: fit-content !important;
+}
+
+.different-app-types-header-text{
+    position: relative;
+    font-family: 'Mukta', sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    margin: .7rem auto;
+    width: fit-content;
+    font-size: 2rem;
+    word-spacing: 2px;
+    user-select: none;
+    padding: 1rem .7rem;
+    border-radius: .4rem;
+    border: 1px solid silver;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+
+.app-types-content-div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-type-preview{
+    position: relative;
+    margin: 1rem 3.5rem;
+    height: 18.5rem !important;
+    width: 15rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.app-type-preview:hover, .app-type-preview:focus{
+    box-shadow: 0 0 7px 2px rgb(158, 158, 158);
+}
+
+.each-app-type-header{
+    position: relative;
+    font-family: 'Texturina', serif;
+    color: whitesmoke;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: .5rem;
+    user-select: none;
+    letter-spacing: .3px;
+    text-align: center;
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.each-app-type-thumbnail{
+    position: relative;
+    width: 100%;
+    height: 14.4rem;
+}
+
+.each-app-type-thumbnail-pic{
+    background-attachment: fixed;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
+.each-app-type-launch-button{
+    display: block;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    text-align: center !important;
+    font-size: 1.5rem;
+    font-family: 'Texturina', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+}
+
+.each-app-type-launch-button:hover, .each-app-type-launch-button:focus{
+    color: lime;
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+/*   It's  media queries time !!!!   */
+
+/* Smartphone media query*/
+@media screen and (max-width:678px) {
+
+    body{
+        width: 100vw;
+        overflow-x: hidden !important;
+    }
+
+    .container-1{
+        display: block;
+    }
+
+    #topmost{
+        grid-template-columns: 15% 70% 15%;
+    }
+
+    .logotext-div h1{
+        font-size: 5.8175vw;
+    }
+
+    .logotext-and-version-divider{
+        display: inline !important;
+    }
+
+    .version-text{
+        font-size: 3.5vw;
+    }
+
+    .desktop-options-menu{
+        display: none;
+    }
+
+    .mobile-options-menu{
+        display: inline-block;
+    }
+
+    .short-intro-div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .short-intro-header{
+        font-size: 3rem;
+        text-align: center;
+        width: 70%;
+    }
+
+
+
+}

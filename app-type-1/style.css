@@ -1,0 +1,349 @@
+/* IMPORT CSS FILES */
+@import url('../css/fonts.css');
+@import url('css/keyframes.css');
+
+/* For JS use only */
+.slide-left-div{
+    transform: translateX(-3000px);
+    transition: all 2s;
+}
+
+.numInput-on-error-state{
+    border: 2.5px solid red !important;
+}
+
+.makeMeVisible{
+    visibility: visible !important;
+}
+
+.shakeMe{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;    
+    transition: all .82s;
+}
+
+
+
+
+
+ /* shhh!!!! */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* What do you expect me to say here too? */
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* The body of the page.Nothing else */
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+};
+
+    
+a{
+    outline: none;
+    user-select: none;
+}
+
+
+button:focus, input:focus, textarea:focus{
+    outline: 0 !important;
+}
+
+.parent-container{
+    background: url(../img/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+}
+
+.container-1{
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+#topmost{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 50% 35%;
+    user-select: none;
+    background: inherit;
+    background-color: rgba(190, 190, 190, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+
+.logo-area-div{
+    position: relative;
+}
+
+.logotext-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logotext-div h1{
+    font-family: 'Sansita Swashed', cursive;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    padding: .75rem;
+    font-weight: bold !important;
+}
+
+#logotext1{
+    color: #0438A3;
+}
+
+#logotext2{
+    color: #80001a;
+}
+
+.logotext-and-version-divider{
+    display: none;
+}
+
+.version-text{
+    position: relative;
+    color: black;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.2rem;
+    top: .75rem;
+}
+
+.mobile-options-menu{
+    display: none;
+}
+
+.container-2{
+    position: relative;
+    background-color: rgba(240, 240, 240, 0.4);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.app-body{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 45rem;
+    margin: 2px solid black;
+    box-shadow: 0 0 12px 2px black;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: .3rem;
+    min-height: 40rem;
+    background-color: rgba(230, 230, 230, 0.7);
+}
+
+.app-type-description-div{
+    width: 90%;
+    position: relative;
+    user-select: none;
+}
+
+.app-type-description-header{
+    font-size: 2rem;
+    font-family: 'Texturina', serif;
+    padding: .75rem;
+    font-weight: bold;
+    color: rgb(45, 45, 45);
+    text-align: center;
+    text-decoration: underline;
+    user-select: none;
+}
+
+.app-type-description-text{
+    position: relative;
+    text-align: justify;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-family: 'Mukta', sans-serif;
+    color: #80001a;
+    line-height: 1.75rem;
+    user-select: none;
+}
+
+.app-control-section-div{
+    position: relative;
+    height: fit-content;
+}
+
+.number-of-courses-input-div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    height: fit-content;
+    width: 70%;
+    margin: 2rem auto;
+    text-align: center;
+    border: 2px solid #0438A3;
+    animation: fade-in-div 2.5s forwards;
+    border-radius: .3rem;
+    background-color: whitesmoke;
+    user-select: none;
+}
+
+.number-of-courses-input-div h2{
+    position: relative;
+    width: 80%;
+    font-size: 1.2rem;
+    font-family: 'Texturina', serif;
+    font-weight: bold;
+    color: #0438A3;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 1.7rem;
+}
+
+#number-of-courses-input-box{
+    width: 10rem;
+    margin-top: .5rem;
+    height: 4rem;
+    border: 2px solid #000000;
+    text-align: center;
+    border-radius: .4rem;
+    font-size: 1.75rem;
+    font-family: 'Mukta', sans-serif;
+    font-weight: bolder;
+    color: #0438A3;
+    margin-bottom: .75rem;
+}
+
+#number-of-courses-input-box::placeholder{
+    padding: .5rem;
+    text-align: center;
+    font-size: 1.2rem !important;
+    font-family: 'Mukta', sans-serif;
+    font-weight: normal;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.submit-number-of-courses-button{
+    background-color: #80001a;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    padding: .5rem;
+    width: 6rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+    font-family: 'Texturina', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.num-input-error-text{
+    color: red;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.1rem;
+    visibility: hidden;
+}
+
+.num-input-error-text span{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   It's  media queries time !!!!   */
+
+/* Smartphone media query*/
+@media screen and (max-width:678px) {
+
+    body{
+        width: 100vw;
+        overflow-x: hidden !important;
+    }
+
+    .container-1{
+        display: block;
+    }
+
+    #topmost{
+        grid-template-columns: 15% 70% 15%;
+    }
+
+    .logotext-div h1{
+        font-size: 5.8175vw;
+    }
+
+    .logotext-and-version-divider{
+        display: inline !important;
+    }
+
+    .version-text{
+        font-size: 3.5vw;
+    }
+
+    .desktop-options-menu{
+        display: none;
+    }
+
+    .mobile-options-menu{
+        display: inline-block;
+    }
+
+
+
+}
