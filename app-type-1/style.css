@@ -12,6 +12,10 @@
     border: 2.5px solid red !important;
 }
 
+.select-on-error-state{
+    border: 2px solid red !important;
+}
+
 .makeMeVisible{
     visibility: visible !important;
 }
@@ -24,6 +28,11 @@
     transition: all .82s;
 }
 
+.fade-out-element{
+    transition: opacity .7s !important; 
+    -webkit-transition: opacity .7s !important; 
+    opacity: 0;
+}
 
 
 
@@ -140,7 +149,6 @@ button:focus, input:focus, textarea:focus{
 .container-2{
     position: relative;
     background-color: rgba(240, 240, 240, 0.4);
-    backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
@@ -155,12 +163,13 @@ button:focus, input:focus, textarea:focus{
     position: relative;
     width: 45rem;
     margin: 2px solid black;
-    box-shadow: 0 0 12px 2px black;
+    box-shadow: 0 0 7px 1px black;
     margin: 0 auto;
     overflow: hidden;
     border-radius: .3rem;
     min-height: 40rem;
     background-color: rgba(230, 230, 230, 0.7);
+    backdrop-filter: blur(3px)
 }
 
 .app-type-description-div{
@@ -194,6 +203,10 @@ button:focus, input:focus, textarea:focus{
 .app-control-section-div{
     position: relative;
     height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .number-of-courses-input-div{
@@ -261,8 +274,7 @@ input[type=number] {
 }
 
 .submit-number-of-courses-button{
-    background-color: #80001a;
-    color: whitesmoke;
+    color: black;
     font-size: 1.3rem;
     padding: .5rem;
     width: 6rem;
@@ -273,7 +285,13 @@ input[type=number] {
     font-weight: bold;
     letter-spacing: 2px;
     cursor: pointer;
+    color: green;
 }
+
+.submit-number-of-courses-button:hover{
+    box-shadow: 0 0 3px 1px black
+}
+
 
 .num-input-error-text{
     color: red;
@@ -285,6 +303,148 @@ input[type=number] {
 .num-input-error-text span{
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+.course-details-input-div{
+    position: relative;
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.course-code-input-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.course-code-input-div div h2{
+    font-family: 'Texturina', serif;
+    font-size: 1.1rem;
+    color: #0438A3;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.course-entry-div{
+    display: flex;
+    justify-content: center;
+    padding: .25rem;
+}
+
+.sub-course-entry-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: .75rem;
+}
+
+.each-course-unit, .course-grade-text{
+    font-size: .99rem;
+    padding: .4rem;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.course-unit-select, .course-grade-select{
+    padding: .3rem;
+    border: none;
+    background: rgb(250, 250, 250);
+    color: #80001a;
+    font-size: 1.05rem;
+    font-family: 'Mukta', sans-serif;
+    border-radius: .4rem;
+}
+
+select:focus{
+    outline: 0 !important;
+    box-shadow: 0 0 4px 1px black;
+}
+
+.course-unit-option, .course-grade-option{
+    text-align: center !important;
+    padding: .6rem;
+}
+
+.course-details-submit-button{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-family: 'Texturina', serif;
+    padding: .75rem;
+    border-radius: .3rem;
+    color: #0438A3;
+}
+
+.course-details-submit-button:hover, .course-details-submit-button:focus{
+    box-shadow: 0 0 5px 1px gray;
+    background-color: white;
+}
+
+.gpa-display-div{
+    background-color: rgb(247, 247, 247);
+    width: 30rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    border: 3px solid #80001a;
+    margin-top: 2rem;
+    user-select: none;
+    animation: fade-in-div 1s forwards;
+}
+
+.gpa-display-header{
+    font-size: 1.7rem;
+    color: #0438A3;
+    font-family: 'Mukta', sans-serif;
+    padding: 1rem;
+}
+
+.gpa-display-pic{
+    object-fit: contain;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 1rem;
+    user-select: none;
+}
+
+.gpa-score{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: bold;
+    font-size: 3.5rem;
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+    border: 2.5px solid black;
+    margin: .5rem;
+    border-radius: .25rem;
+}
+
+.student-type-text{
+    font-size: 1.5rem;
+    font-family: 'Texturina', serif;
+    padding: 1rem;
+    text-align: center;
+}
+
+.student-type-text span{
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 1.75rem;
+}
+
+.reload-button{
+    margin: 2rem;
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+    font-family: 'Mukta', sans-serif;
+    cursor: pointer;
 }
 
 
@@ -343,6 +503,79 @@ input[type=number] {
     .mobile-options-menu{
         display: inline-block;
     }
+
+    .container-2{
+        width: 97vw;
+        margin: 0 auto;
+    }
+
+    .app-body{
+        width: 100%;
+        box-shadow: 0 0 4px 1px black;
+    }
+
+    .app-type-description-header{
+        font-size: 1.75rem;
+    }
+
+    .app-type-description-text{
+        font-size: 1.2rem;
+    }
+
+    .number-of-courses-input-div{
+        width: 21.5rem;
+    }
+
+    .number-of-courses-input-div h2{
+        font-size: 1.1rem;
+    }
+
+    #number-of-courses-input-box{
+        width: 9rem;
+    }
+
+    #number-of-courses-input-box::placeholder{
+        font-size: .95rem !important;
+    }
+
+    .submit-number-of-courses-button{
+        font-size: 1.15rem;
+        width: 5.5rem;
+    }
+
+    .num-input-error-text{
+        font-size: 1rem;
+    }
+
+    .num-input-error-text span{
+        font-size: 1.15rem;
+    }
+
+
+    .course-details-input-div{
+        width: 100%;
+    }
+
+    .course-details-input-div div h2{
+        font-size: 1rem;
+    }
+
+    .course-unit-select, .course-grade-select{
+        padding: .5rem;
+        width: 9.5rem;
+        font-size: .9rem;
+    }
+
+    .course-details-submit-button{
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .gpa-display-div{
+        width: 98.5%;
+        border: 1px solid #80001a;
+    }
+
 
 
 
